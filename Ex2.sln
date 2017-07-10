@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSide", "ClientSide\ClientSide.csproj", "{42EA98A6-A7C8-49A5-B015-CFA38D3AEE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithmsLib", "..\SearchAlgorithmsLib\SearchAlgorithmsLib\SearchAlgorithmsLib.csproj", "{DB53A9F3-B7BE-4AB5-B625-0B410ADA3904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSide", "ServerSide\ServerSide.csproj", "{52401004-B572-44B2-8D12-B9D9CB073F1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42EA98A6-A7C8-49A5-B015-CFA38D3AEE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EA98A6-A7C8-49A5-B015-CFA38D3AEE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EA98A6-A7C8-49A5-B015-CFA38D3AEE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EA98A6-A7C8-49A5-B015-CFA38D3AEE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB53A9F3-B7BE-4AB5-B625-0B410ADA3904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB53A9F3-B7BE-4AB5-B625-0B410ADA3904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB53A9F3-B7BE-4AB5-B625-0B410ADA3904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB53A9F3-B7BE-4AB5-B625-0B410ADA3904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52401004-B572-44B2-8D12-B9D9CB073F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52401004-B572-44B2-8D12-B9D9CB073F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52401004-B572-44B2-8D12-B9D9CB073F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52401004-B572-44B2-8D12-B9D9CB073F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

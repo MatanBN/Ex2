@@ -10,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ViewModels;
 
-namespace View
+namespace Views
 {
+
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SinglePlayerGame.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SinglePlayerGame : Window
     {
-        public MainWindow()
+
+        private StartGameViewModel sgvm;
+
+        public SinglePlayerGame(StartGameViewModel sgvm)
         {
             InitializeComponent();
+            this.sgvm = sgvm;
+            this.DataContext = sgvm;
+
         }
+
     }
 }

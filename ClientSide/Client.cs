@@ -8,7 +8,6 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
 namespace ClientSide
 {
     class Client
@@ -30,6 +29,8 @@ namespace ClientSide
             try
             {
                 server.Connect(ep);
+                
+                
                 Console.WriteLine("You are connected");
                 Console.WriteLine("Please choose one of the command above:\n" +
                 "1. generate <name> <rows> <cols>\n" +

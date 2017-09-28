@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ViewModels;
+using Models;
+using MazeLib;
+using ClientSide;
 namespace Views
 {
     /// <summary>
@@ -30,7 +33,11 @@ namespace Views
 
         public void btnStart_Click(Object SENDER, RoutedEventArgs e)
         {
-            SinglePlayerGame w = new SinglePlayerGame(sgvm);
+
+            ApplicationGameModel agm = new ApplicationGameModel();
+            GameViewModel gvm = new GameViewModel(agm);
+            SinglePlayerGame w = new SinglePlayerGame(gvm, sgvm.MazeCols, sgvm.MazeRows, sgvm.MazeName);
+
             Application.Current.MainWindow = w;
             this.Close();
             w.Show();

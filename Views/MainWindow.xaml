@@ -21,7 +21,7 @@
 
             Single Player
         </Button>
-        <Button x:Name="MP" Margin="184,151,183,118">
+        <Button x:Name="MP" Margin="184,151,183,118" Click="MP_Click">
             Multi Player
         </Button>
 

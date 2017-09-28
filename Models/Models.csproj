@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MazeLib">
+      <HintPath>D:\לימודים\מדעי המחשב\העשרה\תכנות מתקדם 2\תרגילים\2017\MazeLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -61,10 +64,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationGameModel.cs" />
     <Compile Include="ApplicationSettingsModel.cs" />
     <Compile Include="ApplicationStartGameModel.cs" />
+    <Compile Include="IGameModel.cs" />
+    <Compile Include="IMultiGameModel.cs" />
     <Compile Include="ISettingsModel.cs" />
     <Compile Include="IStartGameModel.cs" />
+    <Compile Include="MultiPlayerGameModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

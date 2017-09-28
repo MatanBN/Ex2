@@ -6,11 +6,20 @@
         xmlns:local="clr-namespace:Views"
         xmlns:controls="clr-namespace:Views"
         mc:Ignorable="d"
-        Title="{Binding MazeName}" Height="600" Width="650" WindowStartupLocation="CenterScreen">
+        Title="{Binding MazeName}" Height="600" Width="650" WindowStartupLocation="CenterScreen"
+        KeyDown="mazeBoard_KeyDown">
     <Grid>
-        <Button x:Name="restartBtn" Content="Restart game" HorizontalAlignment="Left" Height="37"  VerticalAlignment="Top" Width="100" Margin="40,26,0,0"/>
-        <Button x:Name="solveBtn" Content="Solve maze" HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="100" Margin="274,26,268,0"/>
-        <Button x:Name="mainBtn" Content="Main menu" HorizontalAlignment="Right" Height="37" VerticalAlignment="Top" Width="100" Margin="0,26,40,0"/>
-        <controls:MazeBoard x:Name="mazeBoard" Rows="5" Margin="10,76,10,10" Grid.Row="1"/>
+        <Button x:Name="restartBtn" Content="Restart game" HorizontalAlignment="Left" Height="37"  VerticalAlignment="Top" Width="100" Margin="40,26,0,0" Click="RestartMaze_Click"/>
+        <Button x:Name="solveBtn" Content="Solve maze" HorizontalAlignment="Center" Height="37" VerticalAlignment="Top" Width="100" Margin="274,26,268,0" Click="SolveMaze_Click"/>
+        <Button x:Name="mainBtn" Content="Main menu" HorizontalAlignment="Right" Height="37" VerticalAlignment="Top" Width="100" Margin="0,26,40,0" Click="MainMenu_Click"/>
+        <controls:MazeBoard x:Name="mazeBoard" Rows="{Binding Rows, Mode=OneTime}" Cols="{Binding Cols, Mode=OneTime}"
+                            InitialPos="{Binding InitialPos, Mode=OneTime}"
+                            GoalPos="{Binding GoalPos, Mode=OneTime}"
+                            PlayerImageFile="{Binding PlayerImageFile, Mode=OneTime}"
+                            ExitImageFile="{Binding ExitImageFile, Mode=OneTime}"
+                            Maze="{Binding Maze, Mode=OneTime}" 
+                            Margin="10,76,10,10" Grid.Row="1">
+
+        </controls:MazeBoard>
     </Grid>
 </Window>

@@ -5,11 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="500" d:DesignWidth="500">
     <Viewbox>
         <Border BorderBrush="Black" BorderThickness="3">
-            <Canvas x:Name="myCanvas" Width="300" Height="300">
-                
+            <Canvas x:Name="myCanvas" Width="500" Height="500">
+                <Image Name="playerImage" Source="{Binding PlayerImageFile, Mode=OneTime}"
+                       Canvas.Left="{Binding Path=PicX, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                       Canvas.Top="{Binding Path=PicY, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Image Name="goalImage" Source="{Binding ExitImageFile, Mode=OneTime}"/>
             </Canvas>
         </Border>
     </Viewbox>

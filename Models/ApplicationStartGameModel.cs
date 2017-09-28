@@ -8,10 +8,16 @@ namespace Models
 {
     public class ApplicationStartGameModel : IStartGameModel
     {
+
         private int mazeCols;
         private int mazeRows;
         private string mazeName;
-
+        public ApplicationStartGameModel()
+        {
+            this.mazeCols = Properties.Settings.Default.MazeCols;
+            this.mazeRows = Properties.Settings.Default.MazeRows;
+            
+        }
         public string MazeName
         {
             get

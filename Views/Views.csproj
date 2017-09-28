@@ -41,6 +41,10 @@
     <Reference Include="MazeLib">
       <HintPath>D:\לימודים\מדעי המחשב\העשרה\תכנות מתקדם 2\תרגילים\2017\MazeLib.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -66,6 +70,15 @@
     <Compile Include="MazeBoard.xaml.cs">
       <DependentUpon>MazeBoard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MazeListener.cs" />
+    <Compile Include="Multi Player.xaml.cs">
+      <DependentUpon>Multi Player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiPlayerGame.xaml.cs">
+      <DependentUpon>MultiPlayerGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultiplayerListener.cs" />
+    <Compile Include="PlayerMovedEventArgs.cs" />
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -91,6 +104,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MazeBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Multi Player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiPlayerGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +150,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +161,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClientSide\ClientSide.csproj">
+      <Project>{42ea98a6-a7c8-49a5-b015-cfa38d3aee80}</Project>
+      <Name>ClientSide</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{c2f48623-11b3-4fc4-8813-7200e8b8f5b1}</Project>
       <Name>Models</Name>
@@ -147,6 +173,11 @@
       <Project>{754b3710-89d7-423f-a9ce-ef8b39e6d33f}</Project>
       <Name>ViewModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Castle.png" />
+    <Resource Include="Resources\SuperMario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

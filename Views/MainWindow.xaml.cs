@@ -44,6 +44,12 @@ namespace Views
             ChangeWindow(sp);
         }
 
+        private void MP_Click(object sender, RoutedEventArgs e)
+        {
+            Multi_Player mp = new Multi_Player(new StartGameViewModel(new ApplicationStartGameModel()));
+            ChangeWindow(mp);
+        }
+
         private void S_Click(Object SENDER, RoutedEventArgs e)
         {
             Settings s = new Settings(new SettingsViewModel(new ApplicationSettingsModel()));

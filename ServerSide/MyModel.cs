@@ -24,10 +24,20 @@ namespace ServerSide
         }
         public Maze GenerateMaze(string name, int rows, int cols)
         {
-            DFSMazeGenerator mazeGen = new DFSMazeGenerator();
-            Maze maze = mazeGen.Generate(rows, cols);
-            maze.Name = name;
-            mazes.Add(name, new Pair<Maze, Solution>(maze, null));
+            Maze maze;
+            Pair<Maze, Solution> tuple;
+            if (!(mazes.TryGetValue(name, out tuple)))
+            {
+                DFSMazeGenerator mazeGen = new DFSMazeGenerator();
+                maze = mazeGen.Generate(rows, cols);
+                maze.Name = name;
+                mazes.Add(name, new Pair<Maze, Solution>(maze, null));
+            }
+            else
+            {
+                maze = tuple.Item1;
+            }
+
             return maze;
         }
 
@@ -120,7 +130,6 @@ namespace ServerSide
                     DeletePairGame(game);
 
                 }
-
             }
             return game;
         }
